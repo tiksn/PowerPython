@@ -14,7 +14,7 @@ namespace TIKSN.PowerPython.Commands
         [Parameter]
         public Dictionary<string, string> Arguments { get; set; }
 
-        [Parameter]
+        [Parameter(Mandatory = true)]
         public string ScriptFile { get; set; }
 
         protected override Task ProcessRecordAsync(CancellationToken cancellationToken)
