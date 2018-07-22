@@ -16,4 +16,10 @@
     <PackageReference Include="TIKSN-Framework" Version="3.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="PowerPython.psd1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
