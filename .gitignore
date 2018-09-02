@@ -331,3 +331,6 @@ ASALocalRun/
 
 ## Application Specific
 Tools/
+
+## Wyam
+config.wyam.*

@@ -1,0 +1,7 @@
+#recipe Docs
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "tiksn.com";
+Settings[DocsKeys.Title] = "PowerPython Docs";
+
+// Add any pipeline customizations here
