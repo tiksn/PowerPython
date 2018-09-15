@@ -6,20 +6,32 @@
 #addin nuget:?package=NuGet.Core&version=2.14.0
 #addin nuget:?package=NuGet.Versioning&version=4.6.2
 #addin "nuget:?package=Cake.Wyam"
+#addin nuget:?package=Cake.Git
+#addin nuget:?package=TIKSN-Cake&loaddependencies=true
 #tool "nuget:?package=Mono.TextTransform"
 #tool "nuget:?package=xunit.runner.console"
 #tool "nuget:?package=Wyam"
 
 var target = Argument("target", "Tweet");
+var configuration = Argument("configuration", "Debug");
 var solution = "PowerPython.sln";
 var mainProject = "PowerPython/PowerPython.csproj";
-var nuspec = "TIKSN-Framework.nuspec";
 var nextVersionString = "";
 
 using System;
 using System.Linq;
 using NuGet.Versioning;
 using Cake.Core.Diagnostics;
+
+Setup(context =>
+{
+    SetTrashParentDirectory(GitFindRootFromPath("."));
+});
+
+Teardown(context =>
+{
+    // Executed AFTER the last task.
+});
 
 Task("Tweet")
   .IsDependentOn("Publish")
@@ -79,7 +91,7 @@ Task("Pack")
     OutputDirectory = "tools"
     };
 
-  NuGetPack(nuspec, nuGetPackSettings);
+  // NuGetPack(nuspec, nuGetPackSettings);
 });
 
 Task("Build")
