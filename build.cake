@@ -99,8 +99,6 @@ Task("Build")
   .IsDependentOn("Restore")
   .Does(() =>
 {
-  var configuration = Argument<string>("Configuration", "Debug");
-
   MSBuild(solution, configurator =>
     configurator.SetConfiguration(configuration)
       .SetVerbosity(Verbosity.Minimal)
