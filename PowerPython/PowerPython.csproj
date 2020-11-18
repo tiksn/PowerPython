@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageReference Include="IronPython" Version="2.7.11" />
     <PackageReference Include="IronPython.StdLib" Version="2.7.11" />
-    <PackageReference Include="TIKSN-Framework" Version="3.1.0-alpha.30" />
+    <PackageReference Include="TIKSN-Framework" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
