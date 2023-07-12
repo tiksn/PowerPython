@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageReference Include="IronPython" Version="3.4.0" />
     <PackageReference Include="IronPython.StdLib" Version="3.4.0" />
-    <PackageReference Include="TIKSN-Framework" Version="4.3.3" />
+    <PackageReference Include="TIKSN-Framework" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
